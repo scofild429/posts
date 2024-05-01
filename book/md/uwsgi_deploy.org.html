@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>uwsgi_deploy.org.md - posts</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.org.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning.org.md</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.org.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap.org.md</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.org.html"><strong aria-hidden="true">3.</strong> Colab_hotkey.org.md</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.org.html"><strong aria-hidden="true">4.</strong> MasterTheorem.org.md</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.org.html"><strong aria-hidden="true">5.</strong> OpenIdProject.org.md</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.org.html"><strong aria-hidden="true">6.</strong> Pandas_merge.org.md</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.org.html"><strong aria-hidden="true">7.</strong> PythonWith~.org.md</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.org.html"><strong aria-hidden="true">8.</strong> UniversalHashing.org.md</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.org.html" class="active"><strong aria-hidden="true">9.</strong> uwsgi_deploy.org.md</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.org.html"><strong aria-hidden="true">10.</strong> yarnInstall.org.md</a></li><li class="chapter-item expanded "><a href="../md/受难记.org.html"><strong aria-hidden="true">11.</strong> 受难记.org.md</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">posts</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<hr />
+<h2 id="title-uwsgi-deploy"><a class="header" href="#title-uwsgi-deploy">title: uwsgi deploy</a></h2>
+<pre><code class="language-{=org}">#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
+</code></pre>
+<pre><code class="language-{=org}">#+STARTUP: overview
+</code></pre>
+<h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
+<ul>
+<li><a href="https://tonyteaches.tech/django-nginx-uwsgi-tutorial/">How to Set Up Django on Nginx with
+uWSGI</a></li>
+<li><a href="https://medium.com/all-about-django/deploying-django-applications-in-production-with-uwsgi-and-nginx-78aac8c0f735">Deploying Django applications in production with uwsgi and
+nginx</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04">How To Secure Nginx with Let's Encrypt on Ubuntu
+20.04</a></li>
+</ul>
+<h1 id="steps"><a class="header" href="#steps">steps</a></h1>
+<h2 id="python-managepy-runserver-should-work"><a class="header" href="#python-managepy-runserver-should-work">python manage.py runserver should work</a></h2>
+<h2 id="uwsgi"><a class="header" href="#uwsgi">uwsgi</a></h2>
+<ul>
+<li>install not in virtual envirement</li>
+</ul>
+<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo apt-get install python3.8-dev
+sudo apt-get install python3.10-dev
+sudo apt-get install gcc
+sudo pip install uwsgi
+</code></pre>
+<ul>
+<li>
+<p>test</p>
+<pre><code class="language-{.bash org-language=&quot;sh&quot;}">uwsgi --http :8000 --module projectname.wsgi
+</code></pre>
+<p>go to 8000 port and check, if remote use port rediect</p>
+<pre><code class="language-{.bash org-language=&quot;sh&quot;}">ssh -L 8000:127.0.0.1:8000 username@ip
+</code></pre>
+</li>
+<li>
+<p>config: /etc/uwsgi/apps-avaiable/project.ini</p>
+<pre><code class="language-text">[uwsgi]
+uid = ubuntu
+gid = ubuntu
+# full path to Django project's root directory
+chdir            = /home/udoms/microdomains/
+# Django's wsgi file
+module           = microdomains.wsgi
+# full path to python virtual env
+home             = /home/udoms/venv
+# enable uwsgi master process
+master          = true
+# maximum number of worker processes
+processes       = 10
+# the socket (use the full path to be safe
+socket          = /home/..../project.sock
+# socket permissions
+chmod-socket    = 666
+# clear environment on exit
+vacuum          = true
+# daemonize uwsgi and write messages into given log
+logto = /var/log/uwsgi/hpcproject.log
+</code></pre>
+</li>
+<li>
+<p>set the log directory</p>
+<pre><code class="language-text">cd /var/log
+sudo mkdir -p uwsgi
+sudo chown -R ubuntu:ubuntu uwsgi/
+</code></pre>
+</li>
+<li>
+<p>test after configation</p>
+<pre><code class="language-text">cd /etc/uwsgi/apps-available/
+uwsgi --ini movies.ini              
+</code></pre>
+</li>
+</ul>
+<p>check the log content with sudo tail -10f /var/log/uwsgi/project.log if
+correct, enable it with soft link to apps-enable</p>
+<h2 id="nginx"><a class="header" href="#nginx">nginx</a></h2>
+<ul>
+<li>
+<p>username</p>
+<pre><code class="language-text"># sudo vim /etc/nginx/nginx.conf
+user cloud;      # instead of www-data
+
+</code></pre>
+</li>
+<li>
+<p>nginx site-avaiable file</p>
+</li>
+</ul>
+<pre><code class="language-tex">upstream django {
+    server unix:///home/..../project/project.sock;
+}
+
+  server {
+      listen  80;
+      server_name DomainName DNS;
+      charset     utf-8;
+      # max upload size
+      client_max_body_size 75M;
+      location /media  {
+          alias /home/..../project/media;
+      }
+      location /static {
+          alias /home/..../project/static;
+      }
+      # Send all non-media requests to the Django server.
+      location / {
+          uwsgi_pass  django;
+          include     /home/..../project/uwsgi_params;
+      }
+    }
+</code></pre>
+<ul>
+<li>
+<p><strong>be careful, the socket path should match</strong></p>
+</li>
+<li>
+<p>last line uwsgi~params~ is in the project root directory</p>
+<pre><code class="language-text">uwsgi_param  QUERY_STRING       $query_string;
+uwsgi_param  REQUEST_METHOD     $request_method;
+uwsgi_param  CONTENT_TYPE       $content_type;
+uwsgi_param  CONTENT_LENGTH     $content_length;
+uwsgi_param  REQUEST_URI        $request_uri;
+uwsgi_param  PATH_INFO          $document_uri;
+uwsgi_param  DOCUMENT_ROOT      $document_root;
+uwsgi_param  SERVER_PROTOCOL    $server_protocol;
+uwsgi_param  REQUEST_SCHEME     $scheme;
+uwsgi_param  HTTPS              $https if_not_empty;
+uwsgi_param  REMOTE_ADDR        $remote_addr;
+uwsgi_param  REMOTE_PORT        $remote_port;
+uwsgi_param  SERVER_PORT        $server_port;
+uwsgi_param  SERVER_NAME        $server_name;
+</code></pre>
+<p>sudo ln -s source des</p>
+<ul>
+<li>enable the nginx configation file and test a picture in media</li>
+</ul>
+</li>
+</ul>
+<h2 id="service"><a class="header" href="#service">service</a></h2>
+<ul>
+<li>
+<p>create service file with sudo vim /etc/systemd/system/uwsgi.service</p>
+<pre><code class="language-text">[Unit]
+Description=uWSGI Emperor service
+
+[Service]
+ExecStartPre=/bin/bash -c 'mkdir -p /run/uwsgi; chown ubuntu:ubuntu /run/uwsgi'
+ExecStart=/usr/local/bin/uwsgi --emperor /etc/uwsgi/apps-enabled
+Restart=always #make sure the server is running
+KillSignal=SIGQUIT
+Type=notify
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+</li>
+</ul>
+<p><strong>be careful for the path of uwsgi</strong></p>
+<ul>
+<li>
+<p>start service and enable it</p>
+<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo systemctl start uwsgi.
+sudo systemctl restart uwsgi.
+sudo systemctl enable uwsgi.
+</code></pre>
+</li>
+</ul>
+<h1 id="ssl"><a class="header" href="#ssl">ssl</a></h1>
+<p>sudo certbot -d -d -d</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../md/UniversalHashing.org.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../md/yarnInstall.org.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../md/UniversalHashing.org.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../md/yarnInstall.org.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
