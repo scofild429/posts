@@ -1,0 +1,13 @@
+#+title: docker_gpu
+
+** Install docker and nvidia docker toolkit
+- install docker [[https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository][link]]
+- install nvidia docker toolkit [[https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt][link]]
+
+#+begin_src sh
+  sudo groupadd docker  
+  sudo gpasswd -a $USER docker
+  docker pull ...
+  sudo systemctl restart docker
+  docekr run -it --gpus all dockerimages /bin/bash
+#+end_src

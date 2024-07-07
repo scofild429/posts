@@ -2,20 +2,6 @@
 [[https://scofild429.github.io/posts/][Seeing contents  in Github Page]]
 
 
-#+begin_src shell
-  cd src
-  touch xxx.org
-  for i in *.org; do pandoc -s $i -o ./md/$i.md; done
-  cd md
-  for i in *.md; do echo "- [$i](./md/$i)" >> ../SUMMARY.md; done
-  cd ../../
-  mdbook build
-  git add .
-  git commit -m "xx"
-  git push
-#+end_src
-
-
 
 
 
