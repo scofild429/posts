@@ -1,0 +1,9 @@
+Dear Ilya,
+
+this is a application letter, but  not only so.
+
+I am Silin Zhao, about to finish my second master thesis in application informatics for portablilty of ONNX in DL , while my first master is about LHC simuliation experiment of particle physics.
+
+I also continuely concern about how to garantie the security of AI. Because of my physics background I hope I am not going to waste your time to read my letter.
+
+ In order to be able to evaluate security AI work,  I can image we need to find the measurement metrix  AI at first.

@@ -1,8 +1,7 @@
-# Summary
-
 - [Association_Rule_minning.org.md](./md/Association_Rule_minning.org.md)
 - [BinaryHeap2FibonacciHeap.org.md](./md/BinaryHeap2FibonacciHeap.org.md)
 - [Colab_hotkey.org.md](./md/Colab_hotkey.org.md)
+- [disable_device.org.md](./md/disable_device.org.md)
 - [MasterTheorem.org.md](./md/MasterTheorem.org.md)
 - [OpenIdProject.org.md](./md/OpenIdProject.org.md)
 - [Pandas_merge.org.md](./md/Pandas_merge.org.md)
