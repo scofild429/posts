@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>yarnInstall.org.md - posts</title>
+        <title>disable_device.org.md - posts</title>
 
 
         <!-- Custom HTML head -->
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.org.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning.org.md</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.org.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap.org.md</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.org.html"><strong aria-hidden="true">3.</strong> Colab_hotkey.org.md</a></li><li class="chapter-item expanded "><a href="../md/disable_device.org.html"><strong aria-hidden="true">4.</strong> disable_device.org.md</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.org.html"><strong aria-hidden="true">5.</strong> MasterTheorem.org.md</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.org.html"><strong aria-hidden="true">6.</strong> OpenIdProject.org.md</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.org.html"><strong aria-hidden="true">7.</strong> Pandas_merge.org.md</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.org.html"><strong aria-hidden="true">8.</strong> PythonWith~.org.md</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.org.html"><strong aria-hidden="true">9.</strong> UniversalHashing.org.md</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.org.html"><strong aria-hidden="true">10.</strong> uwsgi_deploy.org.md</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.org.html" class="active"><strong aria-hidden="true">11.</strong> yarnInstall.org.md</a></li><li class="chapter-item expanded "><a href="../md/受难记.org.html"><strong aria-hidden="true">12.</strong> 受难记.org.md</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.org.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning.org.md</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.org.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap.org.md</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.org.html"><strong aria-hidden="true">3.</strong> Colab_hotkey.org.md</a></li><li class="chapter-item expanded "><a href="../md/disable_device.org.html" class="active"><strong aria-hidden="true">4.</strong> disable_device.org.md</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.org.html"><strong aria-hidden="true">5.</strong> MasterTheorem.org.md</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.org.html"><strong aria-hidden="true">6.</strong> OpenIdProject.org.md</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.org.html"><strong aria-hidden="true">7.</strong> Pandas_merge.org.md</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.org.html"><strong aria-hidden="true">8.</strong> PythonWith~.org.md</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.org.html"><strong aria-hidden="true">9.</strong> UniversalHashing.org.md</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.org.html"><strong aria-hidden="true">10.</strong> uwsgi_deploy.org.md</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.org.html"><strong aria-hidden="true">11.</strong> yarnInstall.org.md</a></li><li class="chapter-item expanded "><a href="../md/受难记.org.html"><strong aria-hidden="true">12.</strong> 受难记.org.md</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,57 +176,19 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<p>yarn can be installed by npm, and yarn --version works, but only for old
-old version</p>
-<p>for yarn init comes the error: "00h00m00s 0/0: : ERROR: [Errno 2] No
-such file or directory: 'init'"</p>
-<p>delete yarn and reinstall it</p>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo apt remove cmdtest
-sudo apt remove yarn
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update
-sudo apt upgrade
-</code></pre>
-<p>for upgrade comes the error:</p>
-<pre><code>ModuleNotFoundError: No module named 'uaclient'
-dpkg: Fehler beim Bearbeiten des Paketes ubuntu-advantage-tools (--configure):
- »installiertes ubuntu-advantage-tools-Skript des Paketes post-installation«-Unterprozess gab den Fehlerwert 1 zurück
-Fehler traten auf beim Bearbeiten von:
- ubuntu-advantage-tools
-E: Sub-process /usr/bin/dpkg returned an error code (1)
-</code></pre>
-<p>Normally in one package is not complete in dpkg or apt,</p>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo dpkg --configure -a
-</code></pre>
-<p>or</p>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo apt install -f
-sudo apt install--fix-broken
-</code></pre>
-<p>works, but if not, remove it if possible so ubuntu-advantage-tools
-should be removed,</p>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo apt-get remove ubuntu-advantage-tools
-sudo mv /var/lib/dpkg/info/ubuntu-advantage-tools.* /tmp/
-sudo dpkg --force-remove-reinstreq --purge ubuntu-advantage-tools
-sudo dpkg --remove --force-remove-reinstreq ubuntu-advantage-tools
-</code></pre>
-<p>then</p>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo apt update
-sudo apt upgrade
-sudo apt install yarn
-yarn --version
-</code></pre>
-<p>new version can be shown, and yarn init works</p>
+<h1 id="disable-devices"><a class="header" href="#disable-devices">Disable devices</a></h1>
+<p>sudo apt install libinput-tools sudo libinput list-devices sudo apt
+install evtest sudo evtest --grab /dev/input/event3 &gt; /dev/null 2&gt;&amp;1 &amp;</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../md/uwsgi_deploy.org.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../md/Colab_hotkey.org.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../md/受难记.org.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../md/MasterTheorem.org.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -236,11 +198,11 @@ yarn --version
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../md/uwsgi_deploy.org.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../md/Colab_hotkey.org.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../md/受难记.org.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../md/MasterTheorem.org.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
