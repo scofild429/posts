@@ -1,6 +1,10 @@
 
 [[https://scofild429.github.io/posts/][Seeing contents  in Github Page]]
-
+- add org file and contents
+- sh build.sh
+- git commit and push
+  
+  
 
 
 

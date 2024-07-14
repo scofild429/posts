@@ -1,14 +1,11 @@
 ---
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
 title: uwsgi deploy
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: overview
-```
-# Reference
+Reference
+=========
 
 -   [How to Set Up Django on Nginx with
     uWSGI](https://tonyteaches.tech/django-nginx-uwsgi-tutorial/)
@@ -17,11 +14,14 @@ title: uwsgi deploy
 -   [How To Secure Nginx with Let\'s Encrypt on Ubuntu
     20.04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04)
 
-# steps
+steps
+=====
 
-## python manage.py runserver should work
+python manage.py runserver should work
+--------------------------------------
 
-## uwsgi
+uwsgi
+-----
 
 -   install not in virtual envirement
 
@@ -46,7 +46,7 @@ sudo pip install uwsgi
 
 -   config: /etc/uwsgi/apps-avaiable/project.ini
 
-    ``` text
+    ``` {.text}
     [uwsgi]
     uid = ubuntu
     gid = ubuntu
@@ -72,7 +72,7 @@ sudo pip install uwsgi
 
 -   set the log directory
 
-    ``` text
+    ``` {.text}
     cd /var/log
     sudo mkdir -p uwsgi
     sudo chown -R ubuntu:ubuntu uwsgi/
@@ -80,7 +80,7 @@ sudo pip install uwsgi
 
 -   test after configation
 
-    ``` text
+    ``` {.text}
     cd /etc/uwsgi/apps-available/
     uwsgi --ini movies.ini              
     ```
@@ -88,11 +88,12 @@ sudo pip install uwsgi
 check the log content with sudo tail -10f /var/log/uwsgi/project.log if
 correct, enable it with soft link to apps-enable
 
-## nginx
+nginx
+-----
 
 -   username
 
-    ``` text
+    ``` {.text}
     # sudo vim /etc/nginx/nginx.conf
     user cloud;      # instead of www-data
 
@@ -100,7 +101,7 @@ correct, enable it with soft link to apps-enable
 
 -   nginx site-avaiable file
 
-``` tex
+``` {.tex}
 upstream django {
     server unix:///home/..../project/project.sock;
 }
@@ -129,7 +130,7 @@ upstream django {
 
 -   last line uwsgi~params~ is in the project root directory
 
-    ``` text
+    ``` {.text}
     uwsgi_param  QUERY_STRING       $query_string;
     uwsgi_param  REQUEST_METHOD     $request_method;
     uwsgi_param  CONTENT_TYPE       $content_type;
@@ -150,11 +151,12 @@ upstream django {
 
     -   enable the nginx configation file and test a picture in media
 
-## service
+service
+-------
 
 -   create service file with sudo vim /etc/systemd/system/uwsgi.service
 
-    ``` text
+    ``` {.text}
     [Unit]
     Description=uWSGI Emperor service
 
@@ -180,6 +182,7 @@ upstream django {
     sudo systemctl enable uwsgi.
     ```
 
-# ssl
+ssl
+===
 
 sudo certbot -d -d -d

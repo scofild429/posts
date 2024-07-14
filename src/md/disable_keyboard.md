@@ -1,0 +1,6 @@
+Disable keyboard
+================
+
+-   xinput --list
+-   find the id of \"AT Translated Set 2 keyboard\", such as 14
+-   xinput --disable 14

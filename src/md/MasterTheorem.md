@@ -1,14 +1,11 @@
 ---
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: content
 title: Master Theorem and examples
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: content
-```
-# Master Theorem
+Master Theorem
+==============
 
 In a Recursive process, we can form this,
 $$ T_n = a \cdot T(\frac{n}{b}) + f(n) $$, for $a \geq 1$, $b \geq 1$. T
@@ -34,7 +31,8 @@ $$   d \le \log_b^a +\epsilon $$ $$   d \le \log_b^a $$ 如果$\log_b^b$
 这种情况要检测正则性： if \$ ∃ c \< 1\$ so that, $af(n/b)  \le cf(n)$.
 if not, Master Theorem can\'t be used in this case
 
-# 1 $T(n) = 3T(n/2) + n^{2}$
+1 $T(n) = 3T(n/2) + n^{2}$
+==========================
 
 a = 3,
 
@@ -50,7 +48,8 @@ $\exists c > 1$ , so $3n^{2}/4 \le c \cdot n^{2}$, for example c = 4/5
 
 so $T(n)  = \Omega(f(n)) = \Omega(n^{2})$
 
-# 2 $T(n) = 4T(n/2) + n^{2}$
+2 $T(n) = 4T(n/2) + n^{2}$
+==========================
 
 a = 4
 
@@ -60,7 +59,8 @@ $n^{\log_{b}^{a}} = n^{2} = \Theta(f(n))$
 
 $T(n) = \Theta(f(n)logn) = \Theta(n^{2}\log n)$
 
-# 3 $T(n) = T(n/2) + 2^{n}$
+3 $T(n) = T(n/2) + 2^{n}$
+=========================
 
 a = 1, b = 2
 
@@ -71,7 +71,8 @@ $\exists c < 1$, such $af(n/b) < cf(n)$
 
 $T(n) = \Theta(2^{n})$
 
-# 4 $T(n) = 2^{n}T(n/2) + n^{n}$
+4 $T(n) = 2^{n}T(n/2) + n^{n}$
+==============================
 
 $a = 2^{n}$, b = 2,
 
@@ -79,7 +80,8 @@ $n^{\log_{b}^{a}} = n^{n} = \Theta(f(n))$
 
 $T(n) = \Theta(f(n)logn) = \Theta(n^{n}logn)$
 
-# 5 $T(n) = 16T(n/4) + n$
+5 $T(n) = 16T(n/4) + n$
+=======================
 
 a = 16, b = 4;
 
@@ -87,7 +89,8 @@ $n^{\log_{b}^{a}} =n^{2} = O(f(n))$
 
 $T(n) = \Theta(n^{2})$
 
-# 6 $T(n) = 2T(n/2) + nlogn$
+6 $T(n) = 2T(n/2) + nlogn$
+==========================
 
 a = 2, b = 2 $n^{\log_{b}^{a}} =n$
 
@@ -98,7 +101,8 @@ polynomial smaller than O(f(n)),
 But in the extend of second case: $n^{\log_{b}^{a}} logn = \Theta(f(n))$
 so $T(n) = \Theta(f(n)log^{2}n) = \Theta(n\log^{2}n)$
 
-# 7 $2T(n) = 2T(n/2) + n/logn$
+7 $2T(n) = 2T(n/2) + n/logn$
+============================
 
 a = 2, b = 2, $n^{\log_{b}^{a}} =n$
 
@@ -109,7 +113,8 @@ polynomial smaller than O(f(n)),
 But in the extend of second case for k = -1:
 $T(n) = \Theta(f(n)loglog^n) = \Theta(n\log\log n)$
 
-# 8 $T(n) = 2T(n/4) + n^{0.51}$
+8 $T(n) = 2T(n/4) + n^{0.51}$
+=============================
 
 a = 2, b = 4, $n^{\log_{b}^{a}} = n^{1/2} = \Omega(n^{0.51})$
 
@@ -118,7 +123,8 @@ a(f(n/b)) \< c f(n);
 
 $T(n) = \Theta(n^{0.51})$
 
-# 9 $T(n) = 0.5T(n/2) +1/n$
+9 $T(n) = 0.5T(n/2) +1/n$
+=========================
 
 a = 1/2, b = 2,
 
@@ -126,7 +132,8 @@ $n^{\log_{b}^{a}} =n^{-1} = \Theta(f(n))$
 
 $T(n) = \Theta(f(n)\log n) = log n/n$
 
-# 10 $T(n) = 16T(n/4) + n!$
+10 $T(n) = 16T(n/4) + n!$
+=========================
 
 a = 16, b = 4, $n^{\log_{b}^{a}} = n^{2} = \Omega(f(n))$
 
@@ -135,7 +142,8 @@ af(n/b) \< cf(n).
 
 $T(n) = \Theta(f(n)) = \Theta(n!)$
 
-# 11 $T(n) = \sqrt{2} T(n/2) + logn$
+11 $T(n) = \sqrt{2} T(n/2) + logn$
+==================================
 
 $a = \sqrt{2}$, b = 2,
 
@@ -143,13 +151,15 @@ $n^{\log_{b}^{a}} = n^{1/2}= O(f(n))$
 
 $T(n) = \Theta(n^{1/2})$
 
-# 12 $T(n) = 3T(n/2) +n$
+12 $T(n) = 3T(n/2) +n$
+======================
 
 a = 3, b = 2 $n^{\log_{b}^{a}} =n^{\log_{2}^{3}} = O(f(n))$
 
 $T(n) = \Theta(n^{\log_{2}^{3}})$
 
-# 13 $T(n) = 3T(n/3) +\sqrt{n}$
+13 $T(n) = 3T(n/3) +\sqrt{n}$
+=============================
 
 a = 3, b = 3
 
@@ -157,7 +167,8 @@ $n^{\log_{b}^{a}} = n = O(f(n))$
 
 $T(n) = \Theta(n)$
 
-# 14 $T(n) = 4T(n/2) + cn$
+14 $T(n) = 4T(n/2) + cn$
+========================
 
 a = 4, b =2,
 
@@ -165,7 +176,8 @@ $n^{\log_{b}^{a}} =n^{2} = O(f(n))$
 
 $T(n) = \Theta(n^{2})$
 
-# 15 $T(n) = 3T(n/4) + nlogn$
+15 $T(n) = 3T(n/4) + nlogn$
+===========================
 
 a = 3, b = 4,
 
@@ -180,7 +192,8 @@ $\frac{3}{4}-\frac{3}{4} \cdot \frac{log 4}{logn} < c < 1$;
 
 so, $T(n) = \Theta(n\log n)$
 
-# 16 $T(n) = 3T(n/3) + n/2$
+16 $T(n) = 3T(n/3) + n/2$
+=========================
 
 a = 3, b = 3,
 
@@ -188,7 +201,8 @@ $n^{\log_{b}^{a}} = n = \Theta(f(n))$
 
 $T(n) = \Theta(f(n)logn) = \Theta(\frac{n}{2}log n)$
 
-# 17 $T(n) = 6T(n/3) +n^{2}logn$
+17 $T(n) = 6T(n/3) +n^{2}logn$
+==============================
 
 a = 6, b = 3 $n^{\log_{b}^{a}} = n^{\log_{3}^{6}} = \Omega(f(n))$
 
@@ -198,7 +212,8 @@ that, $\frac{2}{3} log(1/3) < c < 1$
 
 $T(n) = \Theta(f(n)) = \Theta(n^{2} logn)$
 
-# 18 $T(n) = 4T(n/2) + n/logn$
+18 $T(n) = 4T(n/2) + n/logn$
+============================
 
 a = 4, b = 2,
 
@@ -206,7 +221,8 @@ $n^{\log_{b}^{a}} = n^{2} = O(f(n))$
 
 $T(n) = \Theta(n^{2})$
 
-# 19 $T(n) = 64T(n/8) -n^{2}logn$
+19 $T(n) = 64T(n/8) -n^{2}logn$
+===============================
 
 a = 64, b = 8, $n^{\log_{b}^{a}} = n^{2}$
 
@@ -215,7 +231,8 @@ for extend second case, $n^{\log_{b}^{a}} logn = \Theta(f(n))$, for k =
 
 so $T(n) = \Theta(n^{2}log^{2}n)$
 
-# 20 $T(n) = 7T(n/3) + n^{2}$
+20 $T(n) = 7T(n/3) + n^{2}$
+===========================
 
 a = 7, b = 3,
 
@@ -226,7 +243,8 @@ that af(n/b) \< cf(n), such as c = 8/9;
 
 $T(n) = \Theta(f(n)) = \Theta(n^2)$
 
-# 21 $T(n) = 4T(n/2) + logn$
+21 $T(n) = 4T(n/2) + logn$
+==========================
 
 a = 4, b = 2,
 
@@ -234,7 +252,8 @@ $n^{\log_{b}^{a}} = n^2 = O(f(n))$
 
 $T(n) = \Theta(n^{2})$
 
-# 22 $T(n) = T(n/2) + n(2-cosn)$
+22 $T(n) = T(n/2) + n(2-cosn)$
+==============================
 
 a = 1, b = 2,
 

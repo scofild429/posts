@@ -1,12 +1,12 @@
 ---
-author: Silin Zhao
+author:
+- Silin Zhao
+startup: overview
 title: OpenIdProject
 ---
 
-```{=org}
-#+STARTUP: overview
-```
-# Project description
+Project description
+===================
 
 OpenIdProject is a open identification oriented project, and based on
 block chain technology, social network Application. The key part is
@@ -17,9 +17,11 @@ This project is offical started now (Wed Aug 3 22:41:29 2022), but its
 desige has been start about 2018. I will start to describe its content
 as following parting.
 
-# What will be noted
+What will be noted
+==================
 
-## Was is valuable for us
+Was is valuable for us
+----------------------
 
 Information is the only valuable matter, according to my personal
 opinion. irony, it\'s invisible. From deep aspect, information is just
@@ -76,7 +78,8 @@ personal chain.
 
 ### ......
 
-## Open philosophy
+Open philosophy
+---------------
 
 The best way to protect something is to let everyone knowning what it
 is. Open, Open, Open is the core idea of this project, I don\'t need to
@@ -84,16 +87,23 @@ hidden, of course, if I decide that I don\'t put something into the
 chain, and willing to take the risk for lossing it. It\'s totally my
 personal decision, but I courage myself to put all stuff into my chain.
 
-## Building a personal identification oriented Databank
+Building a personal identification oriented Databank
+----------------------------------------------------
 
-## Why and How to avoid information loss
+Why and How to avoid information loss
+-------------------------------------
 
-# How records will be holded
+How records will be holded
+==========================
 
-# How records will be propagated
+How records will be propagated
+==============================
 
-# How to deal with its drawback
+How to deal with its drawback
+=============================
 
-# Info
+Info
+====
 
-# From Federated Learning to Decentralized Learning
+From Federated Learning to Decentralized Learning
+=================================================

@@ -1,13 +1,9 @@
 ---
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
 title: Association Rule Minning
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: overview
-```
 -   Transaction: T, one behavior, which accomplished a lot of
     things(items)
 -   Item : I, which stands for the smallest unit, that can be done.

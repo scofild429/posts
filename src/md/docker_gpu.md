@@ -2,7 +2,8 @@
 title: docker~gpu~
 ---
 
-## Install docker and nvidia docker toolkit
+Install docker and nvidia docker toolkit
+----------------------------------------
 
 -   install docker
     [link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)

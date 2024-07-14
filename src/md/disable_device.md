@@ -1,6 +1,7 @@
-# Disable devices
+Disable devices
+===============
 
-``` shell
+``` {.shell}
 sudo apt install libinput-tools
 sudo libinput list-devices
 sudo apt install evtest

@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html" class="active"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">10.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">11.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">12.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">13.</strong> 受难记</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html" class="active"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/disable_keyboard.html"><strong aria-hidden="true">10.</strong> disable_keyboard</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">11.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">12.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">13.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">14.</strong> 受难记</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -177,11 +177,9 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2 id="title-summary-of-universal-hashing"><a class="header" href="#title-summary-of-universal-hashing">title: Summary of Universal Hashing</a></h2>
-<pre><code class="language-{=org}">#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-</code></pre>
-<pre><code class="language-{=org}">#+STARTUP: overview
-</code></pre>
+<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
+title: Summary of Universal Hashing</h2>
 <h1 id="definition"><a class="header" href="#definition">Definition</a></h1>
 <p>We want to save a dataset A localy into dataset B, with has m slots in B
 and fast access to search, insert, delete operation,</p>
@@ -197,7 +195,7 @@ Hashing family H</p>
 <p>one example of h can be Carter-Wegman hash function</p>
 <h1 id="carter-wegman-hash-function"><a class="header" href="#carter-wegman-hash-function">Carter-Wegman hash function</a></h1>
 <p>Carter-Wegman hash function is :</p>
-<p>::: center
+<p>::: {.center}
 h(x) = [(ax+b)mod p] mod m
 :::</p>
 <p>assiging p is the nearest prime number bigger than n,</p>
@@ -205,7 +203,7 @@ h(x) = [(ax+b)mod p] mod m
 <p>proof: for <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>, (ax+b)-(ay+b) = a(x-y) is not divisible by p ?
 why?? Is the following a theorem?</p>
 <p><strong>Theorem?</strong></p>
-<p>::: center
+<p>::: {.center}
 Assigning $b$( in our case: x-y ) is an arbitrary intergel number, and
 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> is the a prime number and bigger than <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>, there is not such <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> (in
 our case is also denote as a ) exist, such than 0 &lt; <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> &lt; <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span>, and
@@ -262,7 +260,7 @@ for i in range(len(T)):
     print(T[i] / n)    # This should be approximately equal
 
 </code></pre>
-<pre><code class="language-example">0.02026
+<pre><code class="language-{.example}">0.02026
 0.02023
 0.02001
 0.02017
@@ -329,7 +327,7 @@ index is empty, we use it as our hash value.</p>
 <p>if the index has been token, we reduce a and b by one, and apply
 Carter-Wegman hash function again to find a suitable index in hashtable.</p>
 <p>over loop this process until one empty hashtable index is return</p>
-<p>::: center
+<p>::: {.center}
 Here in our reproducible universal hash, if the half hashtable has been
 token, we double the size of hashtable, so than the over loop process
 will not be too long. Because the Carter-Wegman hash function use the
@@ -396,7 +394,7 @@ if __name__ == '__main__':
 
 
 </code></pre>
-<pre><code class="language-example">[100000, 100001, 100002, 100003, 100004, 100005, 100006, 100007, 100008, 100009, 100010, 100011, 100012, 100013, 100014, 100015, 100016, 100017, 100018, 100019, 100020, 100021, 100022, 100023, 100024, 100025, 100026, 100027, 100028, 100029, 100030, 100031, 100032, 100033, 100034, 100035, 100036, 100037, 100038, 100039, 100040, 100041, 100042, 100043, 100044, 100045, 100046, 100047, 100048, 100049, 100050, 100051, 100052, 100053, 100054, 100055, 100056, 100057, 100058, 100059, 100060, 100061, 100062, 100063, 100064, 100065, 100066, 100067, 100068, 100069, 100070, 100071, 100072, 100073, 100074, 100075, 100076, 100077, 100078, 100079, 100080, 100081, 100082, 100083, 100084, 100085, 100086, 100087, 100088, 100089, 100090, 100091, 100092, 100093, 100094, 100095, 100096, 100097, 100098, 100099]
+<pre><code class="language-{.example}">[100000, 100001, 100002, 100003, 100004, 100005, 100006, 100007, 100008, 100009, 100010, 100011, 100012, 100013, 100014, 100015, 100016, 100017, 100018, 100019, 100020, 100021, 100022, 100023, 100024, 100025, 100026, 100027, 100028, 100029, 100030, 100031, 100032, 100033, 100034, 100035, 100036, 100037, 100038, 100039, 100040, 100041, 100042, 100043, 100044, 100045, 100046, 100047, 100048, 100049, 100050, 100051, 100052, 100053, 100054, 100055, 100056, 100057, 100058, 100059, 100060, 100061, 100062, 100063, 100064, 100065, 100066, 100067, 100068, 100069, 100070, 100071, 100072, 100073, 100074, 100075, 100076, 100077, 100078, 100079, 100080, 100081, 100082, 100083, 100084, 100085, 100086, 100087, 100088, 100089, 100090, 100091, 100092, 100093, 100094, 100095, 100096, 100097, 100098, 100099]
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100099, 100098, 100097, 100096, 100095, 100094, 100093, 100092, 100091, 100090, 100089, 100088, 100087, 100086, 100085, 100084, 100083, 100082, 100081, 100080, 100079, 100078, 100077, 100076, 100075, 100074, 100073, 100072, 100071, 100070, 100069, 100068, 100067, 100066, 100065, 100064, 100063, 100062, 100061, 100060, 100059, 100058, 100057, 100056, 100055, 100054, 100053, 100052, 100051, 100050, 100049, 100048, 100047, 100046, 100045, 100044, 100043, 100042, 100041, 100040, 100039, 100038, 100037, 100036, 100035, 100034, 100033, 100032, 100031, 100030, 100029, 100028, 100027, 100026, 100025, 100024, 100023, 100022, 100021, 100020, 100019, 100018, 100017, 100016, 100015, 100014, 100013, 100012, 100011, 100010, 100009, 100008, 100007, 100006, 100005, 100004, 100003, 100002, 100001, 100000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 x :9000 is not in hashtable
 x :100010 is in hashtable
@@ -464,7 +462,7 @@ if __name__ == '__main__':
 
 
 </code></pre>
-<pre><code class="language-example">[9499, 7809, 9665, 6560, 686, 9560, 6894, 1930, 972, 2659, 50, 8111, 4054, 1588, 9634, 2645, 1875, 6573, 4764, 1851, 3661, 6733, 86, 787, 1139, 1558, 6823, 3650, 2438, 7334, 9074, 3704, 493, 8574, 4280, 6603, 1136, 870, 7313, 7619, 3580, 9129, 1421, 9342, 3873, 9500, 8961, 1279, 3997, 9743, 2565, 8310, 207, 6131, 604, 1294, 9481, 8943, 5951, 8554, 4773, 198, 8479, 8771, 941, 834, 8605, 9254, 3543, 6344, 428, 9841, 3361, 7714, 9908, 2579, 8696, 202, 3235, 6120, 5263, 3912, 2815, 2625, 190, 8407, 4294, 2638, 9100, 7234, 2782, 7793, 9647, 1053, 651, 1309, 9606, 6526, 5017, 2505]
+<pre><code class="language-{.example}">[9499, 7809, 9665, 6560, 686, 9560, 6894, 1930, 972, 2659, 50, 8111, 4054, 1588, 9634, 2645, 1875, 6573, 4764, 1851, 3661, 6733, 86, 787, 1139, 1558, 6823, 3650, 2438, 7334, 9074, 3704, 493, 8574, 4280, 6603, 1136, 870, 7313, 7619, 3580, 9129, 1421, 9342, 3873, 9500, 8961, 1279, 3997, 9743, 2565, 8310, 207, 6131, 604, 1294, 9481, 8943, 5951, 8554, 4773, 198, 8479, 8771, 941, 834, 8605, 9254, 3543, 6344, 428, 9841, 3361, 7714, 9908, 2579, 8696, 202, 3235, 6120, 5263, 3912, 2815, 2625, 190, 8407, 4294, 2638, 9100, 7234, 2782, 7793, 9647, 1053, 651, 1309, 9606, 6526, 5017, 2505]
 [8310, 9254, 9908, 0, 0, 2505, 3704, 651, 0, 3650, 9500, 9499, 0, 0, 8696, 0, 6894, 493, 0, 0, 0, 0, 0, 8943, 686, 0, 4294, 0, 0, 9481, 4280, 1279, 0, 2638, 0, 1875, 9074, 3873, 0, 0, 870, 834, 0, 0, 0, 9665, 0, 5263, 0, 3661, 86, 2659, 0, 0, 0, 0, 4054, 1053, 0, 1851, 50, 0, 0, 9647, 0, 2645, 7234, 0, 0, 9841, 0, 8407, 2438, 0, 0, 3235, 9634, 0, 0, 3543, 0, 0, 428, 0, 0, 2625, 0, 6823, 0, 1421, 0, 7619, 0, 5017, 0, 2815, 0, 0, 0, 0, 0, 7809, 0, 207, 9606, 8605, 604, 6603, 202, 9100, 0, 0, 198, 3997, 0, 0, 0, 7793, 0, 0, 190, 1294, 1588, 787, 0, 0, 0, 0, 2782, 0, 3580, 2579, 0, 0, 0, 0, 8574, 6573, 972, 8771, 0, 0, 0, 0, 0, 2565, 4764, 0, 0, 8961, 6560, 8479, 1558, 0, 0, 0, 8554, 0, 0, 5951, 0, 1309, 0, 4773, 0, 0, 6344, 9743, 9342, 941, 0, 1139, 0, 0, 1136, 0, 7334, 6733, 0, 6131, 1930, 9129, 0, 0, 6526, 0, 0, 3361, 0, 9560, 6120, 0, 0, 0, 0, 0, 7714, 7313, 3912, 8111]
 x :9000 is not in hashtable
 x :100010 is not in hashtable
@@ -520,7 +518,7 @@ for i in range(len(T)):
     print(T[i] / n)    # This should be approximately equal
 
 </code></pre>
-<pre><code class="language-example">0.0
+<pre><code class="language-{.example}">0.0
 0.0
 0.0
 0.0
@@ -634,7 +632,7 @@ if __name__ == '__main__':
 
 
 </code></pre>
-<pre><code class="language-example">[14800, 10600, 1400, 4800, 3400, 17800, 12400, 19800, 10200, 9600, 15800, 5200, 8800, 15200, 18200, 1000, 6200, 6800, 16400, 1800, 8800, 12600, 12600, 9600, 16800, 12800, 14400, 3400, 5800, 11600, 19600, 5600, 5400, 9800, 2000, 7800, 15000, 1800, 18800, 16800, 17600, 9000, 18600, 11800, 19200, 16800, 200, 18800, 19200, 6400, 3000, 12000, 2800, 13600, 13600, 16400, 2000, 16400, 19200, 9200, 6200, 11600, 14800, 18200, 17000, 1200, 17800, 12000, 13200, 17200, 9600, 16200, 8200, 15200, 12000, 8400, 15600, 1800, 4000, 1600, 8200, 16000, 9200, 1400, 14000, 1400, 17000, 3200, 2200, 14800, 14200, 11000, 3600, 14200, 8600, 13000, 7400, 7200, 10600, 17600]
+<pre><code class="language-{.example}">[14800, 10600, 1400, 4800, 3400, 17800, 12400, 19800, 10200, 9600, 15800, 5200, 8800, 15200, 18200, 1000, 6200, 6800, 16400, 1800, 8800, 12600, 12600, 9600, 16800, 12800, 14400, 3400, 5800, 11600, 19600, 5600, 5400, 9800, 2000, 7800, 15000, 1800, 18800, 16800, 17600, 9000, 18600, 11800, 19200, 16800, 200, 18800, 19200, 6400, 3000, 12000, 2800, 13600, 13600, 16400, 2000, 16400, 19200, 9200, 6200, 11600, 14800, 18200, 17000, 1200, 17800, 12000, 13200, 17200, 9600, 16200, 8200, 15200, 12000, 8400, 15600, 1800, 4000, 1600, 8200, 16000, 9200, 1400, 14000, 1400, 17000, 3200, 2200, 14800, 14200, 11000, 3600, 14200, 8600, 13000, 7400, 7200, 10600, 17600]
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17600, 10600, 7200, 7400, 13000, 8600, 14200, 3600, 11000, 14200, 14800, 2200, 3200, 17000, 1400, 14000, 1400, 9200, 16000, 8200, 1600, 4000, 1800, 15600, 8400, 12000, 15200, 8200, 16200, 9600, 17200, 13200, 12000, 17800, 1200, 17000, 18200, 14800, 11600, 6200, 9200, 19200, 16400, 2000, 16400, 13600, 13600, 2800, 12000, 3000, 6400, 19200, 18800, 200, 16800, 19200, 11800, 18600, 9000, 17600, 16800, 18800, 1800, 15000, 7800, 2000, 9800, 5400, 5600, 19600, 11600, 5800, 3400, 14400, 12800, 16800, 9600, 12600, 12600, 8800, 1800, 16400, 6800, 6200, 1000, 18200, 15200, 8800, 5200, 15800, 9600, 10200, 19800, 12400, 17800, 3400, 4800, 1400, 10600, 14800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 x :9000 is in hashtable
 x :100010 is not in hashtable
@@ -708,7 +706,7 @@ if __name__ == '__main__':
 
 
 </code></pre>
-<pre><code class="language-example">[0, 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 6600, 6800, 7000, 7200, 7400, 7600, 7800, 8000, 8200, 8400, 8600, 8800, 9000, 9200, 9400, 9600, 9800, 10000, 10200, 10400, 10600, 10800, 11000, 11200, 11400, 11600, 11800, 12000, 12200, 12400, 12600, 12800, 13000, 13200, 13400, 13600, 13800, 14000, 14200, 14400, 14600, 14800, 15000, 15200, 15400, 15600, 15800, 16000, 16200, 16400, 16600, 16800, 17000, 17200, 17400, 17600, 17800, 18000, 18200, 18400, 18600, 18800, 19000, 19200, 19400, 19600, 19800]
+<pre><code class="language-{.example}">[0, 200, 400, 600, 800, 1000, 1200, 1400, 1600, 1800, 2000, 2200, 2400, 2600, 2800, 3000, 3200, 3400, 3600, 3800, 4000, 4200, 4400, 4600, 4800, 5000, 5200, 5400, 5600, 5800, 6000, 6200, 6400, 6600, 6800, 7000, 7200, 7400, 7600, 7800, 8000, 8200, 8400, 8600, 8800, 9000, 9200, 9400, 9600, 9800, 10000, 10200, 10400, 10600, 10800, 11000, 11200, 11400, 11600, 11800, 12000, 12200, 12400, 12600, 12800, 13000, 13200, 13400, 13600, 13800, 14000, 14200, 14400, 14600, 14800, 15000, 15200, 15400, 15600, 15800, 16000, 16200, 16400, 16600, 16800, 17000, 17200, 17400, 17600, 17800, 18000, 18200, 18400, 18600, 18800, 19000, 19200, 19400, 19600, 19800]
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19800, 19600, 19400, 19200, 19000, 18800, 18600, 18400, 18200, 18000, 17800, 17600, 17400, 17200, 17000, 16800, 16600, 16400, 16200, 16000, 15800, 15600, 15400, 15200, 15000, 14800, 14600, 14400, 14200, 14000, 13800, 13600, 13400, 13200, 13000, 12800, 12600, 12400, 12200, 12000, 11800, 11600, 11400, 11200, 11000, 10800, 10600, 10400, 10200, 10000, 9800, 9600, 9400, 9200, 9000, 8800, 8600, 8400, 8200, 8000, 7800, 7600, 7400, 7200, 7000, 6800, 6600, 6400, 6200, 6000, 5800, 5600, 5400, 5200, 5000, 4800, 4600, 4400, 4200, 4000, 3800, 3600, 3400, 3200, 3000, 2800, 2600, 2400, 2200, 2000, 1800, 1600, 1400, 1200, 1000, 800, 600, 400, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 x :5000 is in hashtable
 x :9000 is in hashtable

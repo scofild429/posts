@@ -1,13 +1,9 @@
 ---
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-bigblow.setup'
+startup: content
 title: Python Numpy with \~
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-bigblow.setup
-```
-```{=org}
-#+startup: content
-```
 Wenn we want to filter the we wanted from a np.array, we can define the
 filter with boolen in a np.array,
 
@@ -18,7 +14,7 @@ print(x)
 
 ```
 
-``` example
+``` {.example}
 [[ 0  1  2  3  4]
  [ 5  6  7  8  9]
  [10 11 12 13 14]
@@ -35,7 +31,7 @@ print(xx)
 
 ```
 
-``` example
+``` {.example}
 [[ 0.  1.  2.  3.  4.]
  [ 5.  6.  7.  8.  9.]
  [10. 11. 12. 13. 14.]
@@ -53,7 +49,7 @@ print(x[y,2])
 
 ```
 
-``` example
+``` {.example}
 [12 17]
 ```
 
@@ -71,6 +67,6 @@ print(x[~y,2])
 
 ```
 
-``` example
+``` {.example}
 [ 2  7 22]
 ```

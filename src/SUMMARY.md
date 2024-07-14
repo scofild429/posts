@@ -7,6 +7,7 @@
 - [PythonWith~](./md/PythonWith~.md)
 - [UniversalHashing](./md/UniversalHashing.md)
 - [disable_device](./md/disable_device.md)
+- [disable_keyboard](./md/disable_keyboard.md)
 - [docker_gpu](./md/docker_gpu.md)
 - [uwsgi_deploy](./md/uwsgi_deploy.md)
 - [yarnInstall](./md/yarnInstall.md)

@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">10.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html" class="active"><strong aria-hidden="true">11.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">12.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">13.</strong> 受难记</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/disable_keyboard.html"><strong aria-hidden="true">10.</strong> disable_keyboard</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">11.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html" class="active"><strong aria-hidden="true">12.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">13.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">14.</strong> 受难记</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -177,11 +177,9 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2 id="title-uwsgi-deploy"><a class="header" href="#title-uwsgi-deploy">title: uwsgi deploy</a></h2>
-<pre><code class="language-{=org}">#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-</code></pre>
-<pre><code class="language-{=org}">#+STARTUP: overview
-</code></pre>
+<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
+title: uwsgi deploy</h2>
 <h1 id="reference"><a class="header" href="#reference">Reference</a></h1>
 <ul>
 <li><a href="https://tonyteaches.tech/django-nginx-uwsgi-tutorial/">How to Set Up Django on Nginx with
@@ -213,7 +211,7 @@ sudo pip install uwsgi
 </li>
 <li>
 <p>config: /etc/uwsgi/apps-avaiable/project.ini</p>
-<pre><code class="language-text">[uwsgi]
+<pre><code class="language-{.text}">[uwsgi]
 uid = ubuntu
 gid = ubuntu
 # full path to Django project's root directory
@@ -238,14 +236,14 @@ logto = /var/log/uwsgi/hpcproject.log
 </li>
 <li>
 <p>set the log directory</p>
-<pre><code class="language-text">cd /var/log
+<pre><code class="language-{.text}">cd /var/log
 sudo mkdir -p uwsgi
 sudo chown -R ubuntu:ubuntu uwsgi/
 </code></pre>
 </li>
 <li>
 <p>test after configation</p>
-<pre><code class="language-text">cd /etc/uwsgi/apps-available/
+<pre><code class="language-{.text}">cd /etc/uwsgi/apps-available/
 uwsgi --ini movies.ini              
 </code></pre>
 </li>
@@ -256,7 +254,7 @@ correct, enable it with soft link to apps-enable</p>
 <ul>
 <li>
 <p>username</p>
-<pre><code class="language-text"># sudo vim /etc/nginx/nginx.conf
+<pre><code class="language-{.text}"># sudo vim /etc/nginx/nginx.conf
 user cloud;      # instead of www-data
 
 </code></pre>
@@ -265,7 +263,7 @@ user cloud;      # instead of www-data
 <p>nginx site-avaiable file</p>
 </li>
 </ul>
-<pre><code class="language-tex">upstream django {
+<pre><code class="language-{.tex}">upstream django {
     server unix:///home/..../project/project.sock;
 }
 
@@ -294,7 +292,7 @@ user cloud;      # instead of www-data
 </li>
 <li>
 <p>last line uwsgi~params~ is in the project root directory</p>
-<pre><code class="language-text">uwsgi_param  QUERY_STRING       $query_string;
+<pre><code class="language-{.text}">uwsgi_param  QUERY_STRING       $query_string;
 uwsgi_param  REQUEST_METHOD     $request_method;
 uwsgi_param  CONTENT_TYPE       $content_type;
 uwsgi_param  CONTENT_LENGTH     $content_length;
@@ -319,7 +317,7 @@ uwsgi_param  SERVER_NAME        $server_name;
 <ul>
 <li>
 <p>create service file with sudo vim /etc/systemd/system/uwsgi.service</p>
-<pre><code class="language-text">[Unit]
+<pre><code class="language-{.text}">[Unit]
 Description=uWSGI Emperor service
 
 [Service]

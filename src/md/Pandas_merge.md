@@ -1,18 +1,15 @@
 ---
-title: Pandas merge & SQL join
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
+title: 'Pandas merge & SQL join'
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: overview
-```
 merge in pandas DataFrame is very similar like join in SQL.
 
-# pandas DataFrame
+pandas DataFrame
+================
 
-``` ipython
+``` {.ipython}
 DataFrame.merge(right,
                 how='inner', 
                 on=None,
@@ -47,7 +44,7 @@ print(b)
 print(a.merge(b))
 ```
 
-``` example
+``` {.example}
    one  two  three
 0    0    0      1
 1    1    0      1
@@ -72,7 +69,7 @@ print(a.merge(b, on='one', how='inner'))
 
 ```
 
-``` example
+``` {.example}
    one  two  three
 0    0    0      1
 1    1    0      1
@@ -95,7 +92,7 @@ print(b)
 print(a.merge(b, on='two', how='inner'))
 ```
 
-``` example
+``` {.example}
    one  two  three
 0    0    0      1
 1    1    0      1

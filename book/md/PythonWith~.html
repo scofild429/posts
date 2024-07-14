@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html" class="active"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">10.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">11.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">12.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">13.</strong> 受难记</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html" class="active"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/disable_keyboard.html"><strong aria-hidden="true">10.</strong> disable_keyboard</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">11.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">12.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">13.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">14.</strong> 受难记</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -177,11 +177,9 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2 id="title-python-numpy-with-"><a class="header" href="#title-python-numpy-with-">title: Python Numpy with ~</a></h2>
-<pre><code class="language-{=org}">#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-bigblow.setup
-</code></pre>
-<pre><code class="language-{=org}">#+startup: content
-</code></pre>
+<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-bigblow.setup'
+startup: content
+title: Python Numpy with ~</h2>
 <p>Wenn we want to filter the we wanted from a np.array, we can define the
 filter with boolen in a np.array,</p>
 <pre><code class="language-{.ipython results=&quot;output&quot; exports=&quot;both&quot;}">import numpy as np
@@ -189,7 +187,7 @@ x = np.arange(25).reshape(5,5)
 print(x)
 
 </code></pre>
-<pre><code class="language-example">[[ 0  1  2  3  4]
+<pre><code class="language-{.example}">[[ 0  1  2  3  4]
  [ 5  6  7  8  9]
  [10 11 12 13 14]
  [15 16 17 18 19]
@@ -201,7 +199,7 @@ xx = np.linspace(0, 24, 25).reshape(5,5)
 print(xx)
 
 </code></pre>
-<pre><code class="language-example">[[ 0.  1.  2.  3.  4.]
+<pre><code class="language-{.example}">[[ 0.  1.  2.  3.  4.]
  [ 5.  6.  7.  8.  9.]
  [10. 11. 12. 13. 14.]
  [15. 16. 17. 18. 19.]
@@ -214,7 +212,7 @@ y = np.array([False, False, True, True, False])
 print(x[y,2])
 
 </code></pre>
-<pre><code class="language-example">[12 17]
+<pre><code class="language-{.example}">[12 17]
 </code></pre>
 <p>according to y = np.array([False, False, True, True, False]) to filter
 the true position in the third column.</p>
@@ -226,7 +224,7 @@ y = np.array([False, False, True, True, False])
 print(x[~y,2])
 
 </code></pre>
-<pre><code class="language-example">[ 2  7 22]
+<pre><code class="language-{.example}">[ 2  7 22]
 </code></pre>
 
                     </main>

@@ -1,14 +1,11 @@
 ---
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
 title: From binary Heap to Fibonacci Heap
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: overview
-```
-# Binary Heap
+Binary Heap
+===========
 
 Binary Heap example deviced by heap sort
 
@@ -52,7 +49,7 @@ let heapfly =  function(list:number[], length:number, index:number){
 
 ```
 
-``` example
+``` {.example}
 [
     2,  1,     3,  4,   5,
     3,  5,     7,  8,  45,
@@ -67,7 +64,8 @@ let heapfly =  function(list:number[], length:number, index:number){
 ]
 ```
 
-# Binomial-tree
+Binomial-tree
+=============
 
 Definition: if k \> 0, $B_{k} = {B_{0}, B_{1}, B_{2}....B_{k-1}}$.
 
@@ -89,7 +87,8 @@ D6 -> D7;
 }   
 ```
 
-# Binomial Heap
+Binomial Heap
+=============
 
 all different order Binomial Tree consist Binomial Heap
 
@@ -119,12 +118,14 @@ D6 -> D7;
 Each order has only one Binomial Tree, conlidataion is required at each
 min-extract, merge
 
-# lazy Binomial Heap
+lazy Binomial Heap
+==================
 
 Min-extra, Merge the conlidataion will not be executed, until it\'s
 needed
 
-# Fibonacci Heap
+Fibonacci Heap
+==============
 
 key-decrease is also lazy, just cut it off, and add to rootlist
 amortised operation reduce Min-extra to $O(log n)$, With Fibonacci array

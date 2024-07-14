@@ -1,14 +1,11 @@
 ---
-title: Golab Vim hotkey, Vim Heft
+setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
+title: 'Golab Vim hotkey, Vim Heft'
 ---
 
-```{=org}
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
-```
-```{=org}
-#+STARTUP: overview
-```
-# Golab with Vim
+Golab with Vim
+==============
 
 1.  Cell model
 
@@ -36,7 +33,8 @@ title: Golab Vim hotkey, Vim Heft
       Code             点击左边执行框内阴影回到Cell model
       ---------------- ------------------------------------
 
-# Vim command model
+Vim command model
+=================
 
   ---- ---------------------
   w    next word front
@@ -59,4 +57,5 @@ title: Golab Vim hotkey, Vim Heft
   G    document end
   ---- ---------------------
 
-# [Go back to index](./index.org)
+[Go back to index](./index.org)
+===============================
