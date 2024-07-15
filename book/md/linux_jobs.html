@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>docker_gpu - posts</title>
+        <title>linux_jobs - posts</title>
 
 
         <!-- Custom HTML head -->
@@ -90,7 +90,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/disable_keyboard.html"><strong aria-hidden="true">10.</strong> disable_keyboard</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html" class="active"><strong aria-hidden="true">11.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/linux_jobs.html"><strong aria-hidden="true">12.</strong> linux_jobs</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">13.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">14.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">15.</strong> 受难记</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../md/Association_Rule_minning.html"><strong aria-hidden="true">1.</strong> Association_Rule_minning</a></li><li class="chapter-item expanded "><a href="../md/BinaryHeap2FibonacciHeap.html"><strong aria-hidden="true">2.</strong> BinaryHeap2FibonacciHeap</a></li><li class="chapter-item expanded "><a href="../md/Colab_hotkey.html"><strong aria-hidden="true">3.</strong> Colab_hotkey</a></li><li class="chapter-item expanded "><a href="../md/MasterTheorem.html"><strong aria-hidden="true">4.</strong> MasterTheorem</a></li><li class="chapter-item expanded "><a href="../md/OpenIdProject.html"><strong aria-hidden="true">5.</strong> OpenIdProject</a></li><li class="chapter-item expanded "><a href="../md/Pandas_merge.html"><strong aria-hidden="true">6.</strong> Pandas_merge</a></li><li class="chapter-item expanded "><a href="../md/PythonWith~.html"><strong aria-hidden="true">7.</strong> PythonWith~</a></li><li class="chapter-item expanded "><a href="../md/UniversalHashing.html"><strong aria-hidden="true">8.</strong> UniversalHashing</a></li><li class="chapter-item expanded "><a href="../md/disable_device.html"><strong aria-hidden="true">9.</strong> disable_device</a></li><li class="chapter-item expanded "><a href="../md/disable_keyboard.html"><strong aria-hidden="true">10.</strong> disable_keyboard</a></li><li class="chapter-item expanded "><a href="../md/docker_gpu.html"><strong aria-hidden="true">11.</strong> docker_gpu</a></li><li class="chapter-item expanded "><a href="../md/linux_jobs.html" class="active"><strong aria-hidden="true">12.</strong> linux_jobs</a></li><li class="chapter-item expanded "><a href="../md/uwsgi_deploy.html"><strong aria-hidden="true">13.</strong> uwsgi_deploy</a></li><li class="chapter-item expanded "><a href="../md/yarnInstall.html"><strong aria-hidden="true">14.</strong> yarnInstall</a></li><li class="chapter-item expanded "><a href="../md/受难记.html"><strong aria-hidden="true">15.</strong> 受难记</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -176,31 +176,23 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<hr />
-<h2 id="title-dockergpu"><a class="header" href="#title-dockergpu">title: docker~gpu~</a></h2>
-<h2 id="install-docker-and-nvidia-docker-toolkit"><a class="header" href="#install-docker-and-nvidia-docker-toolkit">Install docker and nvidia docker toolkit</a></h2>
 <ul>
-<li>install docker
-<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">link</a></li>
-<li>install nvidia docker toolkit
-<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt">link</a></li>
+<li>Ctrl Z -&gt; put job in background</li>
+<li>jobs -&gt; show the jobs with specified number</li>
+<li>bg -&gt; show the background jobs with specified number</li>
+<li>fg -&gt; pull the job to fontend, can be with specified number for
+multiple job in background</li>
 </ul>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo groupadd docker  
-sudo gpasswd -a $USER docker
-docker pull ...
-sudo systemctl restart docker
-docekr run -it --gpus all dockerimages /bin/bash
-</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../md/disable_keyboard.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../md/docker_gpu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../md/linux_jobs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../md/uwsgi_deploy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -210,11 +202,11 @@ docekr run -it --gpus all dockerimages /bin/bash
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../md/disable_keyboard.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../md/docker_gpu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../md/linux_jobs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../md/uwsgi_deploy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
