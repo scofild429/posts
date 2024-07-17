@@ -10,6 +10,7 @@
 - [disable_keyboard](./md/disable_keyboard.md)
 - [docker_gpu](./md/docker_gpu.md)
 - [linux_jobs](./md/linux_jobs.md)
+- [repair_grub](./md/repair_grub.md)
 - [uwsgi_deploy](./md/uwsgi_deploy.md)
 - [yarnInstall](./md/yarnInstall.md)
 - [受难记](./md/受难记.md)
