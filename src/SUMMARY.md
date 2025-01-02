@@ -1,6 +1,7 @@
 - [Association_Rule_minning](./md/Association_Rule_minning.md)
 - [BinaryHeap2FibonacciHeap](./md/BinaryHeap2FibonacciHeap.md)
 - [Colab_hotkey](./md/Colab_hotkey.md)
+- [LoawMath](./md/LoawMath.md)
 - [MasterTheorem](./md/MasterTheorem.md)
 - [OpenIdProject](./md/OpenIdProject.md)
 - [Pandas_merge](./md/Pandas_merge.md)
