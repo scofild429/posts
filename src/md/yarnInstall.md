@@ -1,3 +1,8 @@
+---
+startup: overview
+title: YarnInstall
+---
+
 yarn can be installed by npm, and yarn --version works, but only for old
 old version
 

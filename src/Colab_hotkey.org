@@ -1,6 +1,5 @@
 #+TITLE: Golab Vim hotkey, Vim Heft
 #+OPTIONS: num:nil
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
 #+STARTUP: overview
 * Golab with Vim 
 1. Cell model

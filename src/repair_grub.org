@@ -1,3 +1,7 @@
+#+TITLE: repair_grub
+#+OPTIONS: num:nil
+#+STARTUP: overview
+
 * repair grub
 
 | ls                      |                                             |

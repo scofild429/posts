@@ -1,7 +1,7 @@
 #+TITLE: Association Rule Minning
 #+OPTIONS: num:nil
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
 #+STARTUP: overview
+
 - Transaction: T, one behavior, which accomplished a lot of things(items)
 - Item : I, which stands for the smallest unit, that can be done.
 - Our task is to find out, the relationship between items

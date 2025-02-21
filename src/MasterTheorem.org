@@ -1,6 +1,5 @@
 #+TITLE: Master Theorem and examples 
 #+OPTIONS: num:nil
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
 #+STARTUP: content
 * Master Theorem
 In a Recursive process, we can form this,  \[ T_n = a \cdot T(\frac{n}{b}) + f(n) \],

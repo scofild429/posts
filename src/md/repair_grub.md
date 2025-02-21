@@ -1,3 +1,8 @@
+---
+startup: overview
+title: repair~grub~
+---
+
 repair grub
 ===========
 

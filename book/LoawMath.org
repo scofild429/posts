@@ -1,4 +1,8 @@
 
+#+TITLE: LoawMath
+#+OPTIONS: num:nil
+#+STARTUP: overview
+
 #+begin_src python :results output
 import numpy as np
 

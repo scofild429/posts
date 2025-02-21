@@ -1,3 +1,8 @@
+---
+startup: overview
+title: LoawMath
+---
+
 ``` {.python results="output"}
 import numpy as np
 

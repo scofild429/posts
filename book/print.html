@@ -157,8 +157,7 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
-startup: overview
+<h2>startup: overview
 title: Association Rule Minning</h2>
 <ul>
 <li>Transaction: T, one behavior, which accomplished a lot of
@@ -193,8 +192,7 @@ satisfied S</li>
 Transaction sets</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
-startup: overview
+<h2>startup: overview
 title: From binary Heap to Fibonacci Heap</h2>
 <h1 id="binary-heap"><a class="header" href="#binary-heap">Binary Heap</a></h1>
 <p>Binary Heap example deviced by heap sort</p>
@@ -303,8 +301,7 @@ second also loss, the perent will be cut off, and add to rootlist.
 Max-damaged-Fibonacci-Heap has Fibonacci number nodes</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
-startup: overview
+<h2>startup: overview
 title: 'Golab Vim hotkey, Vim Heft'</h2>
 <h1 id="golab-with-vim"><a class="header" href="#golab-with-vim">Golab with Vim</a></h1>
 <ol>
@@ -358,44 +355,9 @@ G    document end</p>
 <hr />
 <h1 id="go-back-to-index"><a class="header" href="#go-back-to-index"><a href="md/./index.org">Go back to index</a></a></h1>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="disable-devices"><a class="header" href="#disable-devices">Disable devices</a></h1>
-<pre><code class="language-{.shell}">sudo apt install libinput-tools
-sudo libinput list-devices
-sudo apt install evtest
-sudo evtest --grab /dev/input/event3 &gt; /dev/null 2&gt;&amp;1 &amp;
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="disable-keyboard"><a class="header" href="#disable-keyboard">Disable keyboard</a></h1>
-<ul>
-<li>xinput --list</li>
-<li>find the id of "AT Translated Set 2 keyboard", such as 14</li>
-<li>xinput --disable 14</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2 id="title-dockergpu"><a class="header" href="#title-dockergpu">title: docker~gpu~</a></h2>
-<h2 id="install-docker-and-nvidia-docker-toolkit"><a class="header" href="#install-docker-and-nvidia-docker-toolkit">Install docker and nvidia docker toolkit</a></h2>
-<ul>
-<li>install docker
-<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">link</a></li>
-<li>install nvidia docker toolkit
-<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt">link</a></li>
-</ul>
-<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo groupadd docker  
-sudo gpasswd -a $USER docker
-docker pull ...
-sudo systemctl restart docker
-docekr run -it --gpus all dockerimages /bin/bash
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<ul>
-<li>Ctrl Z -&gt; put job in background</li>
-<li>jobs -&gt; show the jobs with specified number</li>
-<li>bg -&gt; show the background jobs with specified number</li>
-<li>fg -&gt; pull the job to fontend, can be with specified number for
-multiple job in background</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h2>startup: overview
+title: LoawMath</h2>
 <pre><code class="language-{.python results=&quot;output&quot;}">import numpy as np
 
 X = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -416,28 +378,7 @@ print(X_approx)
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
-<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
-startup: overview
-title: LSP</h2>
-<h1 id="cc"><a class="header" href="#cc">C/C++</a></h1>
-<ul>
-<li>install clang, libclang-dev</li>
-<li>install clangd server</li>
-<li>if clangd server does not recognise iostream
-<ul>
-<li>sudo apt install g++-12</li>
-</ul>
-</li>
-<li>Indentation is falsh?
-<ul>
-<li>set lsp-enable-indentation to nil</li>
-</ul>
-</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<hr />
-<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
-startup: content
+<h2>startup: content
 title: Master Theorem and examples</h2>
 <h1 id="master-theorem"><a class="header" href="#master-theorem">Master Theorem</a></h1>
 <p>In a Recursive process, we can form this,
@@ -583,15 +524,40 @@ startup: overview
 title: OpenIdProject</li>
 </ul>
 <hr />
-<h1 id="project-description"><a class="header" href="#project-description">Project description</a></h1>
-<p>OpenIdProject is a open identification oriented project, and based on
-block chain technology, social network Application. The key part is
-keeping all information which are relate to the owner, and tracing each
-those information back to when it occured. At the same time each
-propagation of those information will be cross valided its exisence.
-This project is offical started now (Wed Aug 3 22:41:29 2022), but its
-desige has been start about 2018. I will start to describe its content
-as following parting.</p>
+<h1 id="project-description"><a class="header" href="#project-description">Project Description</a></h1>
+<p>OpenID Project is an open-source decentralized identity management
+system leveraging blockchain technology and zero-knowledge proofs. The
+platform enables users to:</p>
+<ul>
+<li>Maintain sovereign control over personal digital identity</li>
+<li>Create verifiable credentials with cryptographically signed
+attestations</li>
+<li>Establish trust relationships through decentralized identifiers
+(DIDs)</li>
+<li>Securely store sensitive information using homomorphic encryption</li>
+<li>Track information provenance through immutable audit trails</li>
+</ul>
+<p>Key Technical Components:</p>
+<ol>
+<li><strong><strong>Identity Blockchain</strong></strong>: Permissioned blockchain using Practical
+Byzantine Fault Tolerance (PBFT) consensus</li>
+<li><strong><strong>ZK-SNARKs Protocol</strong></strong>: For privacy-preserving credential
+verification</li>
+<li><strong><strong>IPFS Integration</strong></strong>: Distributed storage for credential
+documents and attachments</li>
+<li><strong><strong>Cross-Chain Bridges</strong></strong>: Interoperability with Ethereum,
+Hyperledger, and Polkadot</li>
+<li><strong><strong>Quantum-Resistant Cryptography</strong></strong>: NIST-approved post-quantum
+algorithms</li>
+</ol>
+<p>Project Timeline:</p>
+<ul>
+<li>2018: Initial concept and cryptographic research</li>
+<li>2020: Core blockchain prototype development</li>
+<li>2022: Mainnet launch (August 3) with basic identity features</li>
+<li>2023 Q2: Planned integration with EU eIDAS standards</li>
+<li>2024: Target for enterprise-ready version 2.0 release</li>
+</ul>
 <h1 id="what-will-be-noted"><a class="header" href="#what-will-be-noted">What will be noted</a></h1>
 <h2 id="was-is-valuable-for-us"><a class="header" href="#was-is-valuable-for-us">Was is valuable for us</a></h2>
 <p>Information is the only valuable matter, according to my personal
@@ -641,12 +607,58 @@ hidden, of course, if I decide that I don't put something into the
 chain, and willing to take the risk for lossing it. It's totally my
 personal decision, but I courage myself to put all stuff into my chain.</p>
 <h2 id="building-a-personal-identification-oriented-databank"><a class="header" href="#building-a-personal-identification-oriented-databank">Building a personal identification oriented Databank</a></h2>
-<h2 id="why-and-how-to-avoid-information-loss"><a class="header" href="#why-and-how-to-avoid-information-loss">Why and How to avoid information loss</a></h2>
+<h2 id="why-and-how-to-avoid-information-loss"><a class="header" href="#why-and-how-to-avoid-information-loss">Why and How to Avoid Information Loss</a></h2>
+<p>Critical strategies for data preservation:</p>
+<ol>
+<li><a href="https://ipfs.io/">IPFS</a> Content-Addressed Storage:
+<ul>
+<li>Cryptographic hashing of all content</li>
+<li>Distributed storage across network nodes</li>
+<li>Automatic content replication based on usage patterns</li>
+</ul>
+</li>
+<li>Erasure Coding Redundancy:
+<ul>
+<li>32/48 erasure coding scheme for shard recovery</li>
+<li>Geographic distribution of data shards</li>
+<li>Quarterly integrity checks with automatic repair</li>
+</ul>
+</li>
+<li>Decentralized Backup Incentives:
+<ul>
+<li>Storage miners earn tokens for maintaining copies</li>
+<li>Proof-of-Retrievability protocol</li>
+<li>Slashing conditions for failed availability</li>
+</ul>
+</li>
+<li>Cryptographic Proof of Existence:
+<ul>
+<li>Weekly Merkle root commits to Ethereum</li>
+<li>Zero-knowledge proofs for state validity</li>
+<li>Blockchain timestamping of audit trails</li>
+</ul>
+</li>
+<li>Versioned Migration Protocol:
+<ul>
+<li>Automated format migration every 5 years</li>
+<li>Cross-version compatibility layers</li>
+<li>Graceful deprecation of legacy formats</li>
+</ul>
+</li>
+</ol>
 <h1 id="how-records-will-be-holded"><a class="header" href="#how-records-will-be-holded">How records will be holded</a></h1>
-<h1 id="how-records-will-be-propagated"><a class="header" href="#how-records-will-be-propagated">How records will be propagated</a></h1>
-<h1 id="how-to-deal-with-its-drawback"><a class="header" href="#how-to-deal-with-its-drawback">How to deal with its drawback</a></h1>
-<h1 id="info"><a class="header" href="#info">Info</a></h1>
-<h1 id="from-federated-learning-to-decentralized-learning"><a class="header" href="#from-federated-learning-to-decentralized-learning">From Federated Learning to Decentralized Learning</a></h1>
+<h2 id="decentralized-storage-architecture"><a class="header" href="#decentralized-storage-architecture">Decentralized Storage Architecture</a></h2>
+<ul>
+<li>Records stored across distributed nodes using blockchain sharding</li>
+<li>Each node maintains encrypted fragments of records</li>
+<li>Full record reconstruction requires multi-party consensus</li>
+</ul>
+<h2 id="identity-based-encryption"><a class="header" href="#identity-based-encryption">Identity-Based Encryption</a></h2>
+<ul>
+<li>Records encrypted using owner's public key</li>
+<li>Decryption requires corresponding private key</li>
+<li>Automatic key rotation every 6 months</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
 <h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
@@ -795,17 +807,6 @@ print(x[~y,2])
 </code></pre>
 <pre><code class="language-{.example}">[ 2  7 22]
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="repair-grub"><a class="header" href="#repair-grub">repair grub</a></h1>
-<hr />
-<p>ls<br />
-ls (hd0,gpt3)/            gpt3 ist the / directory
-set root = (hd0,gpt3)     /boot is installed in / directory partation
-linux /boot/vmlinux<br />
-initrd /boot/initrd.img<br />
-boot<br />
-sudo update-grub</p>
-<hr />
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
 <p>author:</p>
@@ -1359,6 +1360,85 @@ x :9000 is in hashtable
 x :10300 is not in hashtable
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="disable-devices"><a class="header" href="#disable-devices">Disable devices</a></h1>
+<pre><code class="language-{.shell}">sudo apt install libinput-tools
+sudo libinput list-devices
+sudo apt install evtest
+sudo evtest --grab /dev/input/event3 &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="disable-keyboard"><a class="header" href="#disable-keyboard">Disable keyboard</a></h1>
+<ul>
+<li>xinput --list</li>
+<li>find the id of "AT Translated Set 2 keyboard", such as 14</li>
+<li>xinput --disable 14</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<hr />
+<h2 id="title-dockergpu"><a class="header" href="#title-dockergpu">title: docker~gpu~</a></h2>
+<h2 id="install-docker-and-nvidia-docker-toolkit"><a class="header" href="#install-docker-and-nvidia-docker-toolkit">Install docker and nvidia docker toolkit</a></h2>
+<ul>
+<li>install docker
+<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">link</a></li>
+<li>install nvidia docker toolkit
+<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html#installing-with-apt">link</a></li>
+</ul>
+<pre><code class="language-{.bash org-language=&quot;sh&quot;}">sudo groupadd docker  
+sudo gpasswd -a $USER docker
+docker pull ...
+sudo systemctl restart docker
+docekr run -it --gpus all dockerimages /bin/bash
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<ul>
+<li>Ctrl Z -&gt; put job in background</li>
+<li>jobs -&gt; show the jobs with specified number</li>
+<li>bg -&gt; show the background jobs with specified number</li>
+<li>fg -&gt; pull the job to fontend, can be with specified number for
+multiple job in background</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<hr />
+<h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
+startup: overview
+title: LSP</h2>
+<h1 id="cc"><a class="header" href="#cc">C/C++</a></h1>
+<ul>
+<li>install clang, libclang-dev</li>
+<li>install clangd server</li>
+<li>if clangd server does not recognise iostream
+<ul>
+<li>sudo apt install g++-12</li>
+</ul>
+</li>
+<li>Indentation is falsh?
+<ul>
+<li>set lsp-enable-indentation to nil</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1354em;vertical-align:-0.3854em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6146em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">100</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.822em;"><span style="top:-2.822em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">os</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3854em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2305em;vertical-align:-0.3854em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.6146em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">100</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.822em;"><span style="top:-2.822em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3854em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.3791em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.1291em;"><span style="top:-3.5381em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.3853em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">100</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.1078em;"><span style="top:-3.1078em;margin-right:0.1em;"><span class="pstrut" style="height:2.75em;"></span><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.6148em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.2897em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0397em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight">100</span><span class="mord mtight"><span class="mord mtight">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9667em;"><span style="top:-2.9667em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5357em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">d</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.138em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">−</span><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mord mtight">/</span><span class="mord mathnormal mtight">d</span><span class="mclose mtight">)</span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.1952em;"></span><span class="mord mtight">1000</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">PE</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mop">sin</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.229em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.979em;"><span style="top:-3.363em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">i</span><span class="mbin mtight">⋅</span><span class="mopen mtight">(</span><span class="mord mtight">−</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.88em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mop mtight"><span class="mtight">l</span><span class="mtight">n</span></span><span class="mspace mtight" style="margin-right:0.2453em;"></span><span class="mord mtight">1000</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<hr />
+<h2>startup: overview
+title: repair~grub~</h2>
+<h1 id="repair-grub"><a class="header" href="#repair-grub">repair grub</a></h1>
+<hr />
+<p>ls<br />
+ls (hd0,gpt3)/            gpt3 ist the / directory
+set root = (hd0,gpt3)     /boot is installed in / directory partation
+linux /boot/vmlinux<br />
+initrd /boot/initrd.img<br />
+boot<br />
+sudo update-grub</p>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <hr />
 <h2>setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
 startup: overview
@@ -1529,6 +1609,9 @@ sudo systemctl enable uwsgi.
 <h1 id="ssl"><a class="header" href="#ssl">ssl</a></h1>
 <p>sudo certbot -d -d -d</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<hr />
+<h2>startup: overview
+title: YarnInstall</h2>
 <p>yarn can be installed by npm, and yarn --version works, but only for old
 old version</p>
 <p>for yarn init comes the error: "00h00m00s 0/0: : ERROR: [Errno 2] No

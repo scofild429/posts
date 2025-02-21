@@ -1,5 +1,4 @@
 ---
-setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
 startup: content
 title: Master Theorem and examples
 ---
