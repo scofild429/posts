@@ -1,6 +1,5 @@
 #+TITLE: uwsgi deploy
 #+OPTIONS: num:nil
-#+SETUPFILE: /home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup
 #+STARTUP: overview
 * Reference
 - [[https://tonyteaches.tech/django-nginx-uwsgi-tutorial/][How to Set Up Django on Nginx with uWSGI]]

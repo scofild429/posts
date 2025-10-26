@@ -1,5 +1,4 @@
 ---
-setupfile: '/home/silin/.emacs.d/org-html-themes/org/theme-readtheorg.setup'
 startup: overview
 title: Summary of Universal Hashing
 ---
