@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>linux_jobs - posts</title>
+        <title>langchain_math_tools - posts</title>
 
 
         <!-- Custom HTML head -->
@@ -178,23 +178,195 @@
                 <div id="content" class="content">
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<ul>
-<li>Ctrl Z -&gt; put job in background</li>
-<li>jobs -&gt; show the jobs with specified number</li>
-<li>bg -&gt; show the background jobs with specified number</li>
-<li>fg -&gt; pull the job to fontend, can be with specified number for
-multiple job in background</li>
-</ul>
+<h1 id="langchain-tool-examples"><a class="header" href="#langchain-tool-examples">Langchain tool examples</a></h1>
+<p>So I let the agent to chose one out of four for math operation</p>
+<pre><code class="language-{.python}">from langchain_core.runnables import RunnableConfig
+import warnings
+from langchain.agents import create_agent, AgentState
+from langchain_openai import ChatOpenAI
+from langchain.tools import tool
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.prebuilt.tool_node import ToolRuntime
+from langgraph.types import Command
+from langchain_core.messages import ToolMessage
+import os
+warnings.filterwarnings("ignore")
+
+
+# Step 3: Create agent with custom state
+model = ChatOpenAI(
+    model="gpt-4o-mini",  # ty:ignore[unknown-argument]
+    api_key=str(os.getenv("OPENAI_API_KEY"))   # ty:ignore[unknown-argument]
+)
+checkpointer = MemorySaver()
+
+
+# Step 1: Define custom state by extending AgentState
+class OperationState(AgentState):
+    first: int = 0
+    second: int = 0
+
+
+@tool
+def add_tool(runtime: ToolRuntime) -&gt; Command:
+    """Add the first and second two number together"""
+    first: int = runtime.state.get("first", 0)
+    second: int = runtime.state.get("second", 0)
+    result = first + second
+    print(f"SUM of {first} and {second} is {result}\n")
+    return Command(
+        update={
+            "first": result,
+            "messages": [ToolMessage(
+                content=f"The sum of {first} and {second} is {result}. 'first' has been updated to {result}.",
+                tool_call_id=runtime.tool_call_id
+            )]
+        }
+    )
+
+@tool
+def subtract_tool(runtime: ToolRuntime) -&gt; Command:
+    """Subtract the second number from the first number"""
+    first: int = runtime.state.get("first", 0)
+    second: int = runtime.state.get("second", 0)
+    result = first - second
+    print(f"DIFFERENCE of {first} and {second} is {result}\n")
+    return Command(
+        update={
+            "first": result,
+            "messages": [ToolMessage(
+                content=f"The difference of {first} - {second} is {result}. 'first' has been updated to {result}.",
+                tool_call_id=runtime.tool_call_id
+            )]
+        }
+    )
+
+@tool
+def multiply_tool(runtime: ToolRuntime) -&gt; Command:
+    """Multiply the first and second numbers"""
+    first: int = runtime.state.get("first", 0)
+    second: int = runtime.state.get("second", 0)
+    product = first * second
+    print(f"PRODUCT of {first} and {second} is {product}\n")
+    return Command(
+        update={
+            "first": product,
+            "messages": [ToolMessage(
+                content=f"The product of {first} * {second} is {product}. 'first' has been updated to {product}.",
+                tool_call_id=runtime.tool_call_id
+            )]
+        }
+    )
+
+@tool
+def divide_tool(runtime: ToolRuntime) -&gt; Command:
+    """Divide the first number by the second number"""
+    first: int = runtime.state.get("first", 0)
+    second: int = runtime.state.get("second", 1)
+    if second == 0:
+        return Command(
+            update={
+                "messages": [ToolMessage(
+                    content="Error: Division by zero is undefined.",
+                    tool_call_id=runtime.tool_call_id
+                )]
+            }
+        )
+    quotient = first / second
+    print(f"QUOTIENT of {first} and {second} is {quotient}\n")
+    return Command(
+        update={
+            "first": quotient,
+            "messages": [ToolMessage(
+                content=f"The result of {first} / {second} is {quotient}. 'first' has been updated to {quotient}.",
+                tool_call_id=runtime.tool_call_id
+            )]
+        }
+    )
+
+@tool
+def get_values(runtime: ToolRuntime) -&gt; str:
+    """Print the current value of first and second"""
+    first: int = runtime.state.get("first", 0)
+    second: int = runtime.state.get("second", 1)
+    return f"the current value for first is {first}, and for second is {second}\n"
+
+
+print("=" * 60)
+print("Try commands like do addition, substraction, multiplication or division")
+print("Type 'quit' to exit.")
+print("=" * 60)
+
+
+SYSTEM_PROMPT = """You are a math assistant. You have access to two state variables:
+- 'first': a number that stores the first operand and results
+- 'second': a number that stores the second operand
+
+When the user asks to perform a math operation (add, subtract, multiply, divide),
+call the appropriate tool immediately. The tools will use the current state values.
+Do NOT ask the user for numbers - the tools read from the state automatically.
+
+After each operation, the 'first' value is updated with the result.
+Use get_values to show the current state values."""
+
+# Create final agent with all tools
+full_agent = create_agent(
+    model=model,
+    tools=[add_tool, subtract_tool, multiply_tool, divide_tool, get_values],
+    state_schema=OperationState,
+    checkpointer=checkpointer
+)
+
+# Test the full agent with state updates
+config = {
+    "configurable": {"thread_id": "demo-1"}
+}
+
+# Initialize state with starting values
+initial_state = {
+    "messages": [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": "I'm ready to do math operations."}
+    ],
+    "first": 1000,
+    "second": 10
+}
+
+# Initialize the agent with starting state
+full_agent.invoke(initial_state, config=RunnableConfig(config))
+
+def chat(message: str):
+    """Helper function to chat with the agent."""
+    result = full_agent.invoke(
+        {"messages": [{"role": "user", "content": message}]},
+        config=RunnableConfig(config)
+    )
+    response = result['messages'][-1].content
+    print(f"\nAgent: {response}\n")
+    print(f"Current state - first: {result.get('first', 'N/A')}, second: {result.get('second', 'N/A')}\n")
+    return result
+
+# Interactive loop
+while True:
+    user_input = input("\nYou: ")
+    if user_input.lower() in ['quit', 'exit', 'q']:
+        print("Goodbye!")
+        break
+    if user_input.strip():
+        chat(user_input)
+
+
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../md/langchain_math_tools.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../md/docker_gpu.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../md/lsp.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../md/linux_jobs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -204,11 +376,11 @@ multiple job in background</li>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../md/langchain_math_tools.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../md/docker_gpu.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../md/lsp.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../md/linux_jobs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

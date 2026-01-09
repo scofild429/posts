@@ -12,6 +12,7 @@
 - [disable_device](./md/disable_device.md)
 - [disable_keyboard](./md/disable_keyboard.md)
 - [docker_gpu](./md/docker_gpu.md)
+- [langchain_math_tools](./md/langchain_math_tools.md)
 - [linux_jobs](./md/linux_jobs.md)
 - [lsp](./md/lsp.md)
 - [positionEmbedding](./md/positionEmbedding.md)
